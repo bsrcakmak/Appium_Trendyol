@@ -33,8 +33,8 @@ public class Driver {
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformName"));
             caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersion"));
             caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceName"));
-            caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
-            caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
+            caps.setCapability(MobileCapabilityType.APP,"/Users/esras.a/IdeaProjects/Appium_Trendyol/apps/Trendyol - Online Alışveriş_7.7.3.730_Apkpure.apk");
+           // caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
 
 
 
