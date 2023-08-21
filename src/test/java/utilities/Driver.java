@@ -41,6 +41,8 @@ public class Driver {
 
 
 
+
+
             if (ConfigReader.getProperty("platformName").equals("Android")) {
                 appiumDriver = new AndroidDriver<>(appiumServerURL,caps);
                 appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
