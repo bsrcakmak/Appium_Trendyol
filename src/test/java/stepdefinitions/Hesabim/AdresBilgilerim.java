@@ -17,6 +17,8 @@ public class AdresBilgilerim {
 
     @When("Login is done.")
     public void loginIsDone() {
+
+        System.out.println();
     }
     @And("Click on Hesabim")
     public void clickOnHesabim() {
