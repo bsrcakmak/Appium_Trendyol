@@ -38,6 +38,14 @@ public class Driver {
         //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
             caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("app"));
 
+            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationNameEsra"));
+            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformNameEsra"));
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersionEsra"));
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceNameEsra"));
+            //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
+            //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
+            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("appEsra"));
+
 
 
 
