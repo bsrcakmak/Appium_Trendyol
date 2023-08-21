@@ -23,8 +23,7 @@ public class AdresBilgilerim {
     }
 
     @And("Click on Hesap Ayarlarim")
-    public void clickOnHesapAyarl
-arim() {
+    public void clickOnHesapAyarlarim() {
     }
 
     @And("Click on Adres Bilgilerim")
