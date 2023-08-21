@@ -36,14 +36,7 @@ public class Driver {
             caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceName"));
         //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
         //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
-
-            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationNameBusra"));
-            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformNameBusra"));
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersionBusra"));
-            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceNameBusra"));
-        //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
-        //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
-            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("appBusra"));
+            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("app"));
 
 
 
