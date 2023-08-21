@@ -4,25 +4,27 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.ConfigReader;
+import utilities.Driver;
 
 public class AdresBilgilerim {
 
     @Given("Trendyol mobile application is launched")
     public void trendyolMobileApplicationIsLaunched() {
 
-
+        Driver.getAppiumDriver().get(ConfigReader.getProperty("addBusra"));
     }
 
     @When("Login is done.")
     public void loginIsDone() {
     }
-
     @And("Click on Hesabim")
     public void clickOnHesabim() {
     }
 
     @And("Click on Hesap Ayarlarim")
-    public void clickOnHesapAyarlarim() {
+    public void clickOnHesapAyarl
+arim() {
     }
 
     @And("Click on Adres Bilgilerim")
