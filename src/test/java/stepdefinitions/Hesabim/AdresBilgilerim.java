@@ -9,6 +9,8 @@ public class AdresBilgilerim {
 
     @Given("Trendyol mobile application is launched")
     public void trendyolMobileApplicationIsLaunched() {
+
+
     }
 
     @When("Login is done.")
