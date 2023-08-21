@@ -21,7 +21,7 @@ public class SamsungA13 {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"R68T6007ZPY");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"13");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
-        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\ACER\\IdeaProjects\\Appium\\apps\\trendyol.apk");
+        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\ACER\\IdeaProjects\\Appium_Trendyol\\apps\\Trendyol - Online Alışveriş_7.7.3.730_Apkpure (6).apk");
 
 
 
