@@ -18,7 +18,6 @@ public class AdresBilgilerim {
     @When("Login is done.")
     public void loginIsDone() {
 
-        System.out.println();
     }
     @And("Click on Hesabim")
     public void clickOnHesabim() {
@@ -51,4 +50,16 @@ public class AdresBilgilerim {
     @Then("Confirm that entering the name is accepted and it proceeds to the next field")
     public void confirmThatEnteringTheNameIsAcceptedAndItProceedsToTheNextField() {
     }
+
+//    @And("Click on the Ad field in the Iletisim Bilgileri section.")
+//    public void clickOnTheAdFieldInTheIletisimBilgileriSection() {
+//    }
+
+//    @And("Click on the Soyad field in the Iletisim Bilgileri section.")
+//    public void clickOnTheSoyadFieldInTheIletisimBilgileriSection() {
+//    }
+
+//    @And("Enter a valid value in the Ad field.")
+//    public void enterAValidValueInTheAdField() {
+//    }
 }
