@@ -30,10 +30,10 @@ public class Driver {
 
             DesiredCapabilities caps = new DesiredCapabilities();
 
-            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationName"));
-            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformName"));
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersion"));
-            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceName"));
+            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationNameEsra"));
+            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformNameEsra"));
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersionEsra"));
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceNameEsra"));
         //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
         //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
             caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("app"));
