@@ -55,6 +55,42 @@ public class AdresBilgilerim {
     public void confirmThatEnteringTheNameIsAcceptedAndItProceedsToTheNextField() {
     }
 
+    @And("Click on the {string} field in the Iletisim Bilgileri section and enter a valid value in the {string} field.")
+    public void clickOnTheAdFieldInTheIletisimBilgileriSectionAndEnterAValidValueInTheAdField() {
+    }
+
+    @And("Click on the {string} field in the Iletisim Bilgileri section and enter a valid value in the {string} field")
+    public void clickOnTheSoyadFieldInTheIletisimBilgileriSectionAndEnterAValidValueInTheSoyadField() {
+    }
+
+    @And("Click on the {string} section in the Adres Bilgileri field and choose a city from the opened list.")
+    public void clickOnTheIlSectionInTheAdresBilgileriFieldAndChooseACityFromTheOpenedList() {
+    }
+
+    @And("Click on the {string} section in the Adres Bilgileri field and choose a district from the opened list.")
+    public void clickOnTheIlceSectionInTheAdresBilgileriFieldAndChooseADistrictFromTheOpenedList() {
+    }
+
+    @And("Click on the {string} section in the Adres Bilgileri field and choose a neighbourhood from the opened list.")
+    public void clickOnTheMahalleSectionInTheAdresBilgileriFieldAndChooseANeighbourhoodFromTheOpenedList() {
+    }
+
+    @And("Click on the {string} field in the Adres Bilgileri section and enter a valid value in the {string} field.")
+    public void clickOnTheAdresFieldInTheAdresBilgileriSectionAndEnterAValidValueInTheAdresField() {
+    }
+
+    @And("Select the invoice type as Kurumsal.")
+    public void selectTheInvoiceTypeAsKurumsal() {
+    }
+
+    @And("Click on the {string} field in the Fatura Turu section and enter a valid value in the {string} field.")
+    public void clickOnTheVKNFieldInTheFaturaTuruSectionAndEnterAValidValueInTheAdField() {
+    }
+
+    @Then("Confirm that the new address has been added to the address details list.")
+    public void confirmThatTheNewAddressHasBeenAddedToTheAddressDetailsList() {
+    }
+
 //    @And("Click on the Ad field in the Iletisim Bilgileri section.")
 //    public void clickOnTheAdFieldInTheIletisimBilgileriSection() {
 //    }
