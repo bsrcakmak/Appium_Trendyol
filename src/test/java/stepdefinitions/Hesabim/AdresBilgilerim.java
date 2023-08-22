@@ -6,17 +6,21 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class AdresBilgilerim {
 
     @Given("Trendyol mobile application is launched")
     public void trendyolMobileApplicationIsLaunched() {
 
-        Driver.getAppiumDriver().get(ConfigReader.getProperty("addBusra"));
+        Driver.getAppiumDriver().get(ConfigReader.getProperty("appBusra"));
+        ReusableMethods.scrollTopJS();
+
     }
 
     @When("Login is done.")
     public void loginIsDone() {
+
 
     }
     @And("Click on Hesabim")

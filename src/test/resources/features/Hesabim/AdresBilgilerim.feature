@@ -12,8 +12,6 @@ Feature: Customer Name Addition
     And Click on Adres Ekle
     And Click on the 'Ad' field in the Iletisim Bilgileri section.
     And Click on the 'Soyad' field in the Iletisim Bilgileri section.
-    And
-    Then
 
 
 
