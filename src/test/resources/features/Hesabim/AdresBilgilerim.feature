@@ -4,7 +4,7 @@ Feature: Customer Name Addition
 
   Scenario: Address Addition Test
 
-    Given Trendyol mobile application is launched
+    Given Trendyol mobile application is launched-BSR
     When Login is done.
     And Click on Hesabim
     And Click on Hesap Ayarlarim
