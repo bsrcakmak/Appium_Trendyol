@@ -10,7 +10,7 @@ import utilities.ReusableMethods;
 
 public class AdresBilgilerim {
 
-    @Given("Trendyol mobile application is launched")
+    @Given("Trendyol mobile application is launched-BSR")
     public void trendyolMobileApplicationIsLaunched() {
 
         Driver.getAppiumDriver().get(ConfigReader.getProperty("appBusra"));
