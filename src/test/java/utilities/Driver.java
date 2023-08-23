@@ -30,13 +30,16 @@ public class Driver {
 
             DesiredCapabilities caps = new DesiredCapabilities();
 
-            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationNameEsra"));
-            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformNameEsra"));
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersionEsra"));
-            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceNameEsra"));
+
+            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationNameBusra"));
+            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformNameBusra"));
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersionBusra"));
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceNameBusra"));
         //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
         //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
-            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("app"));
+            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("appBusra"));
+            caps.setCapability(MobileCapabilityType.NO_RESET,true);
+        // false kullandığınızda uygulamayı ilk defa yüklüyomuş gibi sıfırlamaya yarar.
 
 
 

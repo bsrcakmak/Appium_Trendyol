@@ -4,9 +4,13 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.ElementOption;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class ReusableMethods {
 
@@ -66,4 +70,35 @@ public class ReusableMethods {
 
         Driver.getAppiumDriver().findElementByXPath("//XCUIElementTypeStaticText[@name='"+text+"']").click();
     }
+
+
+    public static void scrollTopJS() {
+        JavascriptExecutor js = Driver.getAppiumDriver();
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+    }
+
+    public static void waitFor(int sec) {
+        try {
+            Thread.sleep(sec * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static WebElement selectRandomTextFromDropdown(Select select) {
+        Random random = new Random();
+        List<WebElement> weblist = select.getOptions();
+        int optionIndex = 1 + random.nextInt(weblist.size() - 1);
+        select.selectByIndex(optionIndex);
+        return select.getFirstSelectedOption();
+    }
+
+    //public static void login(String username, String password) {
+    //    HomePage homePage = new HomePage();
+    //    LoginPage loginPage = new LoginPage();
+    //    homePage.loginButton.click();
+    //    loginPage.username.sendKeys(ConfigReader.getProperty(username));
+    //    loginPage.password.sendKeys(ConfigReader.getProperty(password));
+    //    loginPage.loginButton.click();
+    //}
 }
