@@ -1,0 +1,58 @@
+Index: src/test/java/utilities/Driver.java
+===================================================================
+diff --git a/src/test/java/utilities/Driver.java b/src/test/java/utilities/Driver.java
+--- a/src/test/java/utilities/Driver.java	
++++ b/src/test/java/utilities/Driver.java	
+@@ -1,7 +1,6 @@
+ package utilities;
+ 
+ import io.appium.java_client.AppiumDriver;
+-import io.appium.java_client.MobileElement;
+ import io.appium.java_client.android.AndroidDriver;
+ import io.appium.java_client.remote.AndroidMobileCapabilityType;
+ import io.appium.java_client.remote.MobileCapabilityType;
+@@ -9,18 +8,19 @@
+ 
+ import java.net.MalformedURLException;
+ import java.net.URL;
+-import java.util.concurrent.TimeUnit;
++import java.time.Duration;
++
+ 
+ public class Driver {
+ 
+-    private static AppiumDriver<MobileElement>appiumDriver;
++    private static AppiumDriver appiumDriver;
+ 
+     public static AppiumDriver getAppiumDriver() {
+ 
+         URL appiumServerURL = null;
+ 
+         try {
+-            appiumServerURL = new URL("http:0.0.0.0:4723/wd/hub");
++            appiumServerURL = new URL("http:127.0.0.1.:4723");
+         } catch (MalformedURLException e) {
+             e.printStackTrace();
+         }
+@@ -39,6 +39,9 @@
+         //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
+             caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("appBusra"));
+             caps.setCapability(MobileCapabilityType.NO_RESET,true);
++            caps.setCapability(MobileCapabilityType.FULL_RESET,false);
++
++
+         // false kullandığınızda uygulamayı ilk defa yüklüyomuş gibi sıfırlamaya yarar.
+ 
+ 
+@@ -47,8 +50,9 @@
+ 
+ 
+             if (ConfigReader.getProperty("platformName").equals("Android")) {
+-                appiumDriver = new AndroidDriver<>(appiumServerURL,caps);
+-                appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
++                assert appiumServerURL != null;
++                appiumDriver = new AndroidDriver(appiumServerURL,caps);
++                appiumDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+             }else {
+ 
+                 throw new UnsupportedOperationException("Invalid Platform Name " + ConfigReader.getProperty("platformName"));
