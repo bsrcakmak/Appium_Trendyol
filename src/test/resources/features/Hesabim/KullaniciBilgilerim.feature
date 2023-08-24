@@ -1,3 +1,4 @@
+
 Feature: Kullanici Bilgilerim
 
   Scenario: Kullanici Bilgilerim Test
@@ -38,7 +39,7 @@ Feature: Kullanici Bilgilerim
     And click on Kullanici Bilgilerim
     And click on the 'Ad Soyad' section
     And Enter a name of more than 60 characters in the Name field
-    Then view the message 'Ad alani 60 karakterden fazla olamaz'"
+    Then view the message 'Ad alani 60 karakterden fazla olamaz'
 
 
    Scenario: Last Name Test-Negative Test-1
