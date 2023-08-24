@@ -1,0 +1,45 @@
+Index: src/test/java/utilities/Driver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package utilities;\n\nimport io.appium.java_client.AppiumDriver;\nimport io.appium.java_client.MobileElement;\nimport io.appium.java_client.android.AndroidDriver;\nimport io.appium.java_client.remote.AndroidMobileCapabilityType;\nimport io.appium.java_client.remote.MobileCapabilityType;\nimport org.openqa.selenium.remote.DesiredCapabilities;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.concurrent.TimeUnit;\n\npublic class Driver {\n\n    private static AppiumDriver<MobileElement>appiumDriver;\n\n    public static AppiumDriver getAppiumDriver() {\n\n        URL appiumServerURL = null;\n\n        try {\n            appiumServerURL = new URL(\"http:0.0.0.0:4723/wd/hub\");\n        } catch (MalformedURLException e) {\n            e.printStackTrace();\n        }\n\n\n        if (appiumDriver ==null){\n\n            DesiredCapabilities caps = new DesiredCapabilities();\n\n            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty(\"automationName\"));\n            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty(\"platformName\"));\n            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty(\"platformVersion\"));\n            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty(\"deviceName\"));\n        //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty(\"appPackage\"));\n        //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty(\"appActivity\"));\n            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty(\"app\"));\n\n\n\n\n            if (ConfigReader.getProperty(\"platformName\").equals(\"Android\")) {\n                appiumDriver = new AndroidDriver<>(appiumServerURL,caps);\n                appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\n            }else {\n\n                throw new UnsupportedOperationException(\"Invalid Platform Name \" + ConfigReader.getProperty(\"platformName\"));\n\n            }\n\n        }\n\n        return appiumDriver;\n    }\n\n\n    public static void quitAppiumDriver(){\n        if (appiumDriver != null) {\n            appiumDriver.quit();\n            appiumDriver = null;\n        }\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/utilities/Driver.java b/src/test/java/utilities/Driver.java
+--- a/src/test/java/utilities/Driver.java	(revision aa9cddc32cb2298e0d0e18ab576e34614b21d657)
++++ b/src/test/java/utilities/Driver.java	(date 1692610611048)
+@@ -30,13 +30,7 @@
+ 
+             DesiredCapabilities caps = new DesiredCapabilities();
+ 
+-            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,ConfigReader.getProperty("automationName"));
+-            caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ConfigReader.getProperty("platformName"));
+-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,ConfigReader.getProperty("platformVersion"));
+-            caps.setCapability(MobileCapabilityType.DEVICE_NAME,ConfigReader.getProperty("deviceName"));
+-        //  caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,ConfigReader.getProperty("appPackage"));
+-        //  caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,ConfigReader.getProperty("appActivity"));
+-            caps.setCapability(MobileCapabilityType.APP,ConfigReader.getProperty("app"));
++           
+ 
+ 
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"MavenProjectsManager\">\n    <option name=\"originalFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_X\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision aa9cddc32cb2298e0d0e18ab576e34614b21d657)
++++ b/.idea/misc.xml	(date 1692610611056)
+@@ -8,7 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
