@@ -1,0 +1,62 @@
+Index: configuration.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/configuration.properties b/configuration.properties
+--- a/configuration.properties	
++++ b/configuration.properties	
+@@ -14,11 +14,11 @@
+ 
+ 
+ # ********* Esra Arslan 16-30 arasi ***********
+-"deviceNameEsra": "Pixel ",
+-"platformVersionEsra": "10.0",
+-"automationNameEsra": "uiautomator2",
+-"platformNameEsra": "Android",
+-"appEsra": "/Users/esras.a/IdeaProjects/Appium/apps/Trendyol - Online Al??veri?_7.7.3.730_Apkpure.apk"
++deviceNameEsra: Pixel 
++platformVersionEsra: 10.0
++automationNameEsra: uiautomator2
++platformNameEsra: Android
++appEsra: "/Users/esras.a/IdeaProjects/Appium/apps/Trendyol - Online Al??veri?_7.7.3.730_Apkpure.apk
+ 
+ 
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -8,7 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -15,8 +15,8 @@
+ 
+         <cucumber.version>7.11.2</cucumber.version>
+         <cucumber.reporting.version>5.7.5</cucumber.reporting.version>
+-        <selenium.version>3.141.59</selenium.version>
+-        <appium.version>7.6.0</appium.version>
++        <selenium.version>4.1.2</selenium.version>
++        <appium.version>8.5.1</appium.version>
+         <log4j.version>2.20.0</log4j.version>
+         <!-- <junit.version>4.13.2</junit.version>-->
+         <testng.version>7.8.0</testng.version>
