@@ -41,8 +41,6 @@ Feature: Customer Name Addition
 
 
 
-
-
   Scenario: Customer Name Addition Test
 
     And Click on Adres Ekle
