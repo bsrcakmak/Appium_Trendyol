@@ -79,8 +79,8 @@ public class AdresBilgilerim {
     public void clickOnTheAdresFieldInTheAdresBilgileriSectionAndEnterAValidValueInTheAdresField() {
     }
 
-    @And("Select the invoice type as Kurumsal.")
-    public void selectTheInvoiceTypeAsKurumsal() {
+    @And("Select the invoice type as {string}.")
+    public void selectTheInvoiceTypeAsBireysel() {
     }
 
     @And("Click on the {string} field in the Fatura Turu section and enter a valid value in the {string} field.")
@@ -90,6 +90,8 @@ public class AdresBilgilerim {
     @Then("Confirm that the new address has been added to the address details list.")
     public void confirmThatTheNewAddressHasBeenAddedToTheAddressDetailsList() {
     }
+
+
 
 //    @And("Click on the Ad field in the Iletisim Bilgileri section.")
 //    public void clickOnTheAdFieldInTheIletisimBilgileriSection() {

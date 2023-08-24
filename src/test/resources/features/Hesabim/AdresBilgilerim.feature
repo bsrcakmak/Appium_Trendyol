@@ -2,7 +2,7 @@ Feature: Customer Name Addition
 
 
 
-  Scenario: Address Addition Test
+  Scenario: Address Addition Test-Bireysel
 
     Given Trendyol mobile application is launched-BSR
     When Login is done.
@@ -18,16 +18,22 @@ Feature: Customer Name Addition
     And Click on the 'Mahalle' section in the Adres Bilgileri field and choose a neighbourhood from the opened list.
     And Click on the 'Adres' field in the Adres Bilgileri section and enter a valid value in the 'Adres' field.
     And Click on the 'Adres Basligi' field in the Adres Bilgileri section and enter a valid value in the 'Adres' field.
-    And Select the invoice type as Kurumsal.
-    And Click on the 'VKN' field in the Fatura Turu section and enter a valid value in the 'Ad' field.
+    And Select the invoice type as 'Bireysel'.
     And Click on Kaydet button
     Then Confirm that the new address has been added to the address details list.
 
 
 
+  Scenario: Address Addition Test-Kurumsal
+
+
+
+
+
+
   Scenario: Customer Name Addition Test
 
-    Given Trendyol mobile application is launched
+    Given Trendyol mobile application is launched-BSR
     When Login is done.
     And Click on Hesabim
     And Click on Hesap Ayarlarim
