@@ -91,6 +91,9 @@ public class AdresBilgilerim {
     public void confirmThatTheNewAddressHasBeenAddedToTheAddressDetailsList() {
     }
 
+    @And("Select the invoice type as Kurumsal.")
+    public void selectTheInvoiceTypeAsKurumsal() {
+    }
 
 
 //    @And("Click on the Ad field in the Iletisim Bilgileri section.")
