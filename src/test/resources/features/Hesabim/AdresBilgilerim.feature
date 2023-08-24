@@ -1,15 +1,17 @@
 Feature: Customer Name Addition
 
-
-
-  Scenario: Address Addition Test-Bireysel
+  Background:
 
     Given Trendyol mobile application is launched-BSR
     When Login is done.
     And Click on Hesabim
     And Click on Hesap Ayarlarim
     And Click on Adres Bilgilerim
-    And Click on Adres Ekle
+
+
+  Scenario: Address Addition Test-Bireysel
+
+    Given Click on Adres Ekle
     And Click on the 'Ad' field in the Iletisim Bilgileri section and enter a valid value in the 'Ad' field.
     And Click on the 'Soyad' field in the Iletisim Bilgileri section and enter a valid value in the 'Soyad' field
     And Click on the 'Cep Telefonu' field in the Iletisim Bilgileri section and enter a valid value in the 'Cep Telefonu' field
@@ -33,11 +35,6 @@ Feature: Customer Name Addition
 
   Scenario: Customer Name Addition Test
 
-    Given Trendyol mobile application is launched-BSR
-    When Login is done.
-    And Click on Hesabim
-    And Click on Hesap Ayarlarim
-    And Click on Adres Bilgilerim
     And Click on Adres Ekle
     And Click on the 'Ad' field in the Iletisim Bilgileri section.
     And Enter a valid value in the 'Ad' field.
